@@ -2,7 +2,7 @@
   <div>
     <div class="container">
       <div class="card card-login mx-auto mt-5">
-        <div class="card-header">Recuperar Senha</div>
+        <div class="card-header cor-purple">Recuperar Senha</div>
         <div class="card-body">
           <div class="text-center mt-4 mb-5">
             <h4>Esqueceu sua senha?</h4>
@@ -13,7 +13,7 @@
           </div>
           <form>
             <div class="form-group">
-              <label for="email">Email</label>
+              <label for="email" class="cor-purple">Email</label>
               <input
                 type="email"
                 class="form-control"
@@ -22,10 +22,18 @@
                 placeholder="Digite seu Email"
               />
             </div>
-            <button class="btn btn-primary btn-block">Recuperar Senha</button>
+            <button class="btn btn-pink text-white btn-block">
+              Recuperar Senha
+            </button>
             <div class="text-center">
-              <nuxt-link to="/auth/register" class="d-block small mt-3">Criar uma Conta</nuxt-link>
-              <nuxt-link to="/auth" class="d-block small">Página de Login</nuxt-link>
+              <nuxt-link
+                to="/auth/register"
+                class="d-block small mt-3 cor-purple"
+                >Criar uma Conta</nuxt-link
+              >
+              <nuxt-link to="/auth" class="d-block small cor-purple"
+                >Página de Login</nuxt-link
+              >
             </div>
           </form>
         </div>
@@ -37,6 +45,8 @@
 <script>
 export default {
   name: 'RegisterPage',
+
+  layout: 'auth',
 
   data() {
     return {}
@@ -56,4 +66,27 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.btn-pink {
+  background-color: #be185d;
+}
+
+.btn-pink:hover {
+  background-color: #e83e8c;
+}
+
+.cor-pink {
+  color: #e83e8c;
+}
+cor-pink:hover {
+  color: #f472b6;
+}
+
+.cor-purple {
+  color: purple;
+}
+
+input:checked {
+  background-color: purple;
+}
+</style>
